@@ -1,3 +1,8 @@
+:root {
+    --principal-text-color: #D5AC8C;
+    --detalle-maizena-color: #6c3f13;
+}
+
 /* Estilos de presentacion */
 
 #fondoBienvenida{
@@ -10,6 +15,108 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
+}
+
+/* Estilos detalle de productos */
+#tituloProductos {
+    text-align: center;
+    color: #FFF;
+    background-color: #575050;
+    
+}
+
+.btnInfo{
+    border-radius: 0px;
+    color: var(--principal-text-color) ;
+    font-weight: bold;
+    border:2px solid var(--principal-text-color);
+}
+
+.btnInfo:hover {
+    background-color: #575050;
+    color: var(--principal-text-color);
+}
+
+.infoProducto {
+    background-color: #000;
+    color: var(--principal-text-color);
+    padding: 50px
+}
+
+.infoProducto h5 {
+    font-weight: lighter;
+}
+
+.infoProducto .detallePresentacion {
+    font-weight: bold;
+    padding: 0 30px 10px;
+}
+
+.infoProducto .detalleProducto {
+    color: #FFF;
+    padding: 10px 30px 0;
+}
+
+#divCardAlfajores  {
+    background-color: var(--principal-text-color);
+    display: flex;
+    justify-content: center;
+}
+
+#divCardAlfajores img {
+    max-width: 85%;
+    height: auto;
+}
+
+#divTxtAlfajoresMaizena {
+    width: 50%;
+    margin: 40px;
+}
+
+
+#divTxtAlfajoresMaizena .detalleProducto{
+    color: #FFF;
+}
+
+#divTxtAlfajoresMaizena .detallePresentacion {
+    color: var(--detalle-maizena-color);
+    font-weight: bold;
+}
+
+#divTxtAlfajoresMaizena h5 {
+    color: var(--detalle-maizena-color);
+    font-weight: normal;
+}
+
+#divTxtAlfajoresMaizena .btnInfo {
+    color: var(--detalle-maizena-color);
+    border-radius: 0px;
+    font-weight: bold;
+    border:2px solid var(--detalle-maizena-color);
+}
+
+/* Calidad */
+#calidad {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #2a2526;
+    color: #FFF;
+    padding: 30px;
+}
+
+#iconosCalidad {
+    display: flex;
+
+}
+
+#iconosCalidad img{
+    padding: 15px;
+
+}
+
+#iconosCalidad h6 {
+    /*max-width: 40px;*/
 
 }
 
@@ -21,14 +128,24 @@
     margin: none;
     color: #FFF;
     margin: 2rem;
-
 }
 
 .contenedorTexto {
     margin: 3rem
 }
 
+.cardProducto {
+    display: flex;
+    flex-direction: row;
+}
+
+.imgProducto {
+    max-width: 50%;
+    max-height: auto;
+}
+
 /* Media Query*/
+/* MOBILE */
 @media screen and (min-width: 480px) and (max-width:940px) {
     
 
@@ -40,6 +157,58 @@
 
     .cardGenerales {
         color: #000
+    }
+
+    #tituloProductos {
+        color: var(--principal-text-color);
+        background: rgb(102,100,100);
+        background: linear-gradient(117deg, rgba(102,100,100,1) 0%, rgba(0,5,6,1) 100%);
+    }
+
+    .btnInfo{
+        border: 1px solid;
+        font-weight: normal;
+        display: grid;
+        width: 180px;
+    }
+
+    .infoProducto h5 {
+        font-weight: bold;
+    }
+
+    .infoProducto .detallePresentacion {
+        font-weight: lighter;
+    }
+
+    .cardProducto {
+        display: grid;
+    }
+
+    .reverse{
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+
+    .imgProducto {
+        max-width: 100%;
+        max-height: auto;
+    }
+
+    #divTxtAlfajoresMaizena .detallePresentacion {
+        color: var(--detalle-maizena-color);
+        font-weight: normal;
+    }
+    
+    #divTxtAlfajoresMaizena h5 {
+        color: var(--detalle-maizena-color);
+        font-weight: bold;
+    }
+    
+    #divTxtAlfajoresMaizena .btnInfo {
+        color: var(--detalle-maizena-color);
+        border-radius: 0px;
+        font-weight: normal;
+        border:1px solid var(--detalle-maizena-color);
     }
 
 }
